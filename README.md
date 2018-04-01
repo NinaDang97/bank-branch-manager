@@ -1,11 +1,11 @@
 # AutoBoxingAndUnboxingChallenge
 ### Task:
 Bank class
-        - It should have an arraylist of Branches
-        - Each Branch should have an arraylist of Customers
-        - The Customer class should have an arraylist of Doubles (transactions)
+        * It should have an arraylist of Branches
+        * Each Branch should have an arraylist of Customers
+        * The Customer class should have an arraylist of Doubles (transactions)
 Customer: 
-        - Name, and the ArrayList of doubles
+        * Name, and the ArrayList of doubles
 Branch:
         Need to be able to add a new customer and initial transaction amount.<br />
         Also needs to add additional transactions for that customer/branch
