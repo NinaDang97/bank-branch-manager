@@ -68,11 +68,12 @@ public class Bank {
 	//[optional] list of their transactions
 	public void showAllCustomerOfBranch(String searchBranch, boolean showTransaction){
 		int indexBranch = searchBranch(searchBranch);
+		System.out.println(indexBranch);
 		if(indexBranch != -1){
 			branchList.get(indexBranch).getCustomerList(showTransaction);
 		}
 		else{
-			System.out.println(searchBranch + " cannot be found.");
+			System.out.println(searchBranch + " cannot be found");
 		}
 	}
 	

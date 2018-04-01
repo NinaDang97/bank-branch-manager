@@ -2,12 +2,14 @@ import java.util.ArrayList;
 
 public class Customer {
 	private String customerName;
-	private ArrayList<Double> transactionList = new ArrayList<Double>();
+	private ArrayList<Double> transactionList;
 
 	//constructor with customer name
-	public Customer(String customerName) {
+	public Customer(String customerName, double initialAmount) {
 		super();
 		this.customerName = customerName;
+		this.transactionList = new ArrayList<Double>();
+		addTransaction(initialAmount);
 	}
 	
 	//getter customerName

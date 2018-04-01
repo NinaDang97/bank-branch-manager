@@ -17,7 +17,7 @@ public class Main {
 		
 		//show a list of customers for a specific branch
 		//[optional] list of their transactions
-		newBank.showAllCustomerOfBranch("Saigon-Tan Phu", true);
+		newBank.showAllCustomerOfBranch("Helsinki-Pasila", true);
 		
 		//To be continued with user input
 		//

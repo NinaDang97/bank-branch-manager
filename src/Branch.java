@@ -2,23 +2,16 @@ import java.util.ArrayList;
 
 public class Branch {
 	private String branchName;
-	private ArrayList<Customer> customerList = new ArrayList<Customer>();
+	private ArrayList<Customer> customerList;
 	private Customer customer;
 	
 	//constructor with branch name
 	public Branch(String branchName) {
 		super();
 		this.branchName = branchName;
+		this.customerList = new ArrayList<Customer>();
 	}
 
-	//add a new customer & initial transaction
-	public void addCustomer(String customerName, double initialTransaction){
-		customer = new Customer(customerName);
-		customer.addTransaction(initialTransaction);
-		customerList.add(customer);
-		System.out.println("New customer is successfully added: " + customerName + ", initial transaction: " + initialTransaction);
-	}
-	
 	//find existing customer
 	public int searchCustomer(String customerName){
 		for(int i = 0; i < customerList.size(); i++){
@@ -28,6 +21,19 @@ public class Branch {
 				return i;
 		}
 		return -1;
+	}
+		
+	//add a new customer & initial transaction
+	public void addCustomer(String customerName, double initialTransaction){
+		int index = searchCustomer(customerName);
+		if(index == -1){
+			customer = new Customer(customerName, initialTransaction);
+			customerList.add(customer);
+			System.out.println("New customer is successfully added: " + customerName + ", initial transaction: " + initialTransaction);
+		}
+		else{
+			System.out.println("Customer " + customerName + " already exists");
+		}
 	}
 	
 	//add additional transactions for existing customer
